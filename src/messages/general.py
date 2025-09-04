@@ -3,10 +3,12 @@ from typing import List, Optional
 
 from uagents import Model
 
+# Enum to represent different types of responses from the agent
 class UAgentResponseType(Enum):
     ERROR = "error"
     TEMPERATURE = "temperature"
 
+# Model for the response returned by the agent
 class UAgentResponse(Model):
     type: UAgentResponseType
     agent_address: Optional[str]
